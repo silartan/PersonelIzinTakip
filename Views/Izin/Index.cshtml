@@ -1,0 +1,71 @@
+﻿@model IEnumerable<PersonelIzinTakip.Models.IzinTalep>
+@if (TempData["SuccessMessage"] != null)
+{
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            Swal.fire({
+                icon: 'success',
+                title: 'İşlem Başarılı!',
+                text: '@Html.Raw(TempData["SuccessMessage"])',
+                confirmButtonColor: '#198754',
+                confirmButtonText: 'Tamam',
+                timer: 4000
+            });
+        });
+    </script>
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>İzin Taleplerim</h2>
+        <a asp-action="TalepEt" class="btn btn-primary">Yeni İzin İste</a>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Başlangıç</th>
+                        <th>Bitiş</th>
+                        <th>Gün</th>
+                        <th>Açıklama</th>
+                        <th>Durum</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (!Model.Any())
+                    {
+                        <tr>
+                            <td colspan="6" class="text-center text-muted">Henüz bir izin talebiniz bulunmamaktadır.</td>
+                        </tr>
+                    }
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.BaslangicTarihi.ToShortDateString()</td>
+                            <td>@item.BitisTarihi.ToShortDateString()</td>
+                            <td>@item.GunSayisi</td>
+                            <td>@item.Aciklama</td>
+                            <td>
+                                @if (item.Durum == "Bekliyor")
+                                {
+                                    <span class="badge bg-warning text-dark">@item.Durum</span>
+                                }
+                                else if (item.Durum == "Onaylandı")
+                                {
+                                    <span class="badge bg-success">@item.Durum</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-danger">@item.Durum</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

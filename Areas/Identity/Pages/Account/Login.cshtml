@@ -1,0 +1,78 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Personel Girişi";
+}
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-5 col-lg-4">
+        <div class="card shadow-lg border-0 rounded-4">
+            <div class="card-header bg-dark text-white text-center py-4 rounded-top-4">
+                <i class="fa-solid fa-lock fa-3x mb-2"></i>
+                <h3 class="fw-bold mb-0">Hoş Geldiniz</h3>
+                <p class="small opacity-75 mb-0">Lütfen giriş bilgilerinizi giriniz</p>
+            </div>
+            <div class="card-body p-4">
+                <section>
+                    <form id="account" method="post">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger py-2 small" role="alert"></div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="Input.Email" class="form-control border-2" autocomplete="username" aria-required="true" placeholder="ad@sirket.com" />
+                            <label asp-for="Input.Email" class="form-label text-muted">E-posta Adresi</label>
+                            <span asp-validation-for="Input.Email" class="text-danger small"></span>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="Input.Password" class="form-control border-2" autocomplete="current-password" aria-required="true" placeholder="şifre" />
+                            <label asp-for="Input.Password" class="form-label text-muted">Şifre</label>
+                            <span asp-validation-for="Input.Password" class="text-danger small"></span>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input" asp-for="Input.RememberMe" />
+                                <label asp-for="Input.RememberMe" class="form-check-label small">
+                                    Beni Hatırla
+                                </label>
+                            </div>
+                            <a id="forgot-password" asp-page="./ForgotPassword" class="text-decoration-none small fw-bold">Şifremi Unuttum</a>
+                        </div>
+
+                        <button id="login-submit" type="submit" class="w-100 btn btn-primary btn-lg rounded-pill fw-bold shadow-sm mb-3">
+                            <i class="fa-solid fa-right-to-bracket me-2"></i>Sisteme Giriş Yap
+                        </button>
+
+                        <div class="text-center mt-3 border-top pt-3">
+                            <p class="small text-muted mb-0">Henüz hesabınız yok mu?</p>
+                            <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="fw-bold text-decoration-none">
+                                Yeni Personel Hesabı Oluştur
+                            </a>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+
+        @* Eğer dış servis (Google vb.) kullanmıyorsan bu alanı göstermemek daha profesyonel durur *@
+        @if ((Model.ExternalLogins?.Count ?? 0) > 0)
+        {
+            <div class="text-center mt-4 p-3 bg-light rounded shadow-sm">
+                <p class="small text-muted mb-2">Veya şununla bağlan:</p>
+                <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                    @foreach (var provider in Model.ExternalLogins!)
+                    {
+                        <button type="submit" class="btn btn-outline-dark btn-sm w-100" name="provider" value="@provider.Name">
+                            <i class="fa-brands fa-@provider.Name.ToLower() me-1"></i> @provider.DisplayName ile Giriş
+                        </button>
+                    }
+                </form>
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

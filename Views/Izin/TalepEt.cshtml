@@ -1,0 +1,63 @@
+﻿@model PersonelIzinTakip.Models.IzinTalep
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-6 col-lg-5">
+        @* Formu gölgeli ve şık bir kart içine alıyoruz *@
+        <div class="card shadow-lg border-0 rounded-3">
+            <div class="card-header bg-primary text-white py-3">
+                <h4 class="mb-0 text-center">
+                    <i class="fa-solid fa-paper-plane me-2"></i>Yeni İzin Talebi
+                </h4>
+            </div>
+            <div class="card-body p-4">
+                <form asp-action="TalepEt" method="post">
+
+                    @* Hata mesajları (Örn: Tarih çakışması) burada şık bir uyarı kutusunda görünecek *@
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger shadow-sm" role="alert" style="font-weight: 500;"></div>
+
+                    <div class="mb-3">
+                        <label asp-for="BaslangicTarihi" class="form-label fw-bold text-dark">
+                            <i class="fa-solid fa-calendar-plus me-1 text-primary"></i> Başlangıç Tarihi
+                        </label>
+                        <input asp-for="BaslangicTarihi" type="date" class="form-control form-control-lg border-2" required />
+                        <span asp-validation-for="BaslangicTarihi" class="text-danger small"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="BitisTarihi" class="form-label fw-bold text-dark">
+                            <i class="fa-solid fa-calendar-check me-1 text-success"></i> Bitiş Tarihi
+                        </label>
+                        <input asp-for="BitisTarihi" type="date" class="form-control form-control-lg border-2" required />
+                        <span asp-validation-for="BitisTarihi" class="text-danger small"></span>
+                    </div>
+
+                    <div class="mb-4">
+                        <label asp-for="Aciklama" class="form-label fw-bold text-dark">
+                            <i class="fa-solid fa-comment-dots me-1 text-info"></i> İzin Açıklaması
+                        </label>
+                        <textarea asp-for="Aciklama" class="form-control border-2" rows="3" placeholder="Lütfen izin talep nedeninizi kısaca yazınız..."></textarea>
+                        <span asp-validation-for="Aciklama" class="text-danger small"></span>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg fw-bold shadow-sm">
+                            <i class="fa-solid fa-paper-plane me-2"></i>Talebi Gönder
+                        </button>
+                        <a asp-action="Index" class="btn btn-light btn-sm text-secondary mt-2">
+                            <i class="fa-solid fa-arrow-left me-1"></i> Vazgeç ve Listeye Dön
+                        </a>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer bg-light text-center py-2">
+                <small class="text-muted">Talebiniz yönetici onayına sunulacaktır.</small>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

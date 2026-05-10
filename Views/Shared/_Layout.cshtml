@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Personel İzin Sistemi</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f7f9;
+        }
+
+        .navbar {
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        }
+
+        .nav-link {
+            font-weight: 500;
+            transition: all 0.3s;
+            color: rgba(255,255,255,0.85) !important;
+        }
+
+            .nav-link:hover {
+                color: #fff !important;
+                transform: translateY(-1px);
+            }
+
+        .footer {
+            background: #fff;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark border-bottom mb-4">
+            <div class="container">
+                <a class="navbar-brand fw-bold" asp-controller="Home" asp-action="Index">
+                    <i class="fa-solid fa-calendar-check me-2"></i>İzin Takip
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Index"><i class="fa-solid fa-house me-1"></i> Ana Sayfa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Izin" asp-action="Index"><i class="fa-solid fa-file-lines me-1"></i> İzin Taleplerim</a>
+                        </li>
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("Mudur"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-info fw-bold" asp-controller="Izin" asp-action="OnayBekleyenler"><i class="fa-solid fa-user-shield me-1"></i> Müdür Paneli</a>
+                            </li>
+                        }
+                    </ul>
+
+                    @* GİRİŞ / ÇIKIŞ BUTONLARI BURAYA EKLENDİ *@
+                    <ul class="navbar-nav">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <span class="nav-link fw-bold text-white"><i class="fa-solid fa-user-circle me-1"></i> Merhaba!</span>
+                            </li>
+                            <li class="nav-item">
+                                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                    <button type="submit" class="nav-link btn btn-link border-0"><i class="fa-solid fa-right-from-bracket me-1"></i> Çıkış</button>
+                                </form>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="Identity" asp-page="/Account/Register"><i class="fa-solid fa-user-plus me-1"></i> Kayıt</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="Identity" asp-page="/Account/Login"><i class="fa-solid fa-sign-in-alt me-1"></i> Giriş</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-5">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer border-top text-muted">
+        <div class="container text-center">
+            &copy; 2026 - <b>Personel İzin Takip Sistemi</b>
+        </div>
+    </footer>
+
+   
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    @* --- GLOBAL BİLDİRİM SİSTEMİ --- *@
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Başarılı!',
+                    text: '@Html.Raw(TempData["SuccessMessage"])',
+                    confirmButtonColor: '#198754',
+                    confirmButtonText: 'Tamam',
+                    timer: 3500
+                });
+            });
+        </script>
+    }
+
+    @* --- GLOBAL HATA SİSTEMİ (Opsiyonel ama önerilir) --- *@
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Hata!',
+                    text: '@Html.Raw(TempData["ErrorMessage"])',
+                    confirmButtonColor: '#d33',
+                    confirmButtonText: 'Kapat'
+                });
+            });
+        </script>
+    }
+</body>
+</html>
+
