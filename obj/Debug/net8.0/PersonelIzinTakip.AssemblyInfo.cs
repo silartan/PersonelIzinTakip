@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PersonelIzinTakip")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c569d2de8bceebb3725cc214f4eaf5fe01016162")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c2b587aa275d687ef3eea06f107dc11bd9e1316")]
 [assembly: System.Reflection.AssemblyProductAttribute("PersonelIzinTakip")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PersonelIzinTakip")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
