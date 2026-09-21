@@ -6,6 +6,12 @@
             <h2 class="fw-bold text-dark"><i class="fa-solid fa-user-check me-2 text-primary"></i>Müdür Onay Paneli</h2>
             <p class="text-muted small">Şu anda onay bekleyen <b>@Model.Count()</b> adet izin talebi bulunmaktadır.</p>
         </div>
+        <div>
+            <a asp-controller="Izin" asp-action="ExcelIndir" class="btn btn-success shadow-sm d-inline-flex align-items-center fw-bold px-3 py-2">
+                <i class="fa-regular fa-file-excel me-2" style="font-size: 1.2rem;"></i>
+                Tüm İzinleri Excel Olarak İndir
+            </a>
+        </div>
     </div>
 
     <div class="card shadow-sm border-0">
@@ -58,17 +64,14 @@
                             </td>
                             <td class="text-end pe-4">
                                 <div class="d-flex justify-content-end gap-2">
-                                    @* Onayla Butonu - JS ile tetiklenir *@
                                     <button type="button" class="btn btn-success btn-sm px-3" onclick="confirmAction('@item.Id', 'Onayla', '@item.User?.AdSoyad')">
                                         <i class="fa-solid fa-check me-1"></i> Onayla
                                     </button>
 
-                                    @* Reddet Butonu - JS ile tetiklenir *@
                                     <button type="button" class="btn btn-outline-danger btn-sm px-3" onclick="confirmAction('@item.Id', 'Reddet', '@item.User?.AdSoyad')">
                                         <i class="fa-solid fa-xmark me-1"></i> Reddet
                                     </button>
 
-                                    @* Gizli Formlar *@
                                     <form id="form-Onayla-@item.Id" asp-action="Onayla" asp-route-id="@item.Id" method="post"></form>
                                     <form id="form-Reddet-@item.Id" asp-action="Reddet" asp-route-id="@item.Id" method="post"></form>
                                 </div>

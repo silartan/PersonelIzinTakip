@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GsgSpghCC8t4Z6OQYCSFBgetq3MynzuNABZPC2biZ+s=",
+  "Hash": "JtrO+LB8TjCtjeoENU88yoKQa3klfOUgtl4OMsIaLBE=",
   "Source": "PersonelIzinTakip",
   "BasePath": "_content/PersonelIzinTakip",
   "Mode": "Default",
@@ -2577,6 +2577,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\artan\\OneDrive\\Masaüstü\\Bitirme Projesi\\PersonelIzinTakip\\PersonelIzinTakip\\wwwroot\\Mailler.txt",
+      "SourceId": "PersonelIzinTakip",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\artan\\OneDrive\\Masaüstü\\Bitirme Projesi\\PersonelIzinTakip\\PersonelIzinTakip\\wwwroot\\",
+      "BasePath": "_content/PersonelIzinTakip",
+      "RelativePath": "Mailler#[.{fingerprint}]?.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2if8gwv2rd",
+      "Integrity": "hv/c0sNhyjGng7vnDjoP9v6d8PWRLHuMIPK3BBF7zrA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Mailler.txt"
     }
   ],
   "Endpoints": [
@@ -9721,6 +9742,88 @@
       ]
     },
     {
+      "Route": "Mailler.2if8gwv2rd.txt",
+      "AssetFile": "C:\\Users\\artan\\OneDrive\\Masaüstü\\Bitirme Projesi\\PersonelIzinTakip\\PersonelIzinTakip\\wwwroot\\Mailler.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6567"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hv/c0sNhyjGng7vnDjoP9v6d8PWRLHuMIPK3BBF7zrA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Sep 2026 13:35:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2if8gwv2rd"
+        },
+        {
+          "Name": "label",
+          "Value": "Mailler.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hv/c0sNhyjGng7vnDjoP9v6d8PWRLHuMIPK3BBF7zrA="
+        }
+      ]
+    },
+    {
+      "Route": "Mailler.txt",
+      "AssetFile": "C:\\Users\\artan\\OneDrive\\Masaüstü\\Bitirme Projesi\\PersonelIzinTakip\\PersonelIzinTakip\\wwwroot\\Mailler.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6567"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hv/c0sNhyjGng7vnDjoP9v6d8PWRLHuMIPK3BBF7zrA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Sep 2026 13:35:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hv/c0sNhyjGng7vnDjoP9v6d8PWRLHuMIPK3BBF7zrA="
+        }
+      ]
+    },
+    {
       "Route": "PersonelIzinTakip.85xbkbrghk.bundle.scp.css",
       "AssetFile": "C:\\Users\\artan\\OneDrive\\Masaüstü\\Bitirme Projesi\\PersonelIzinTakip\\PersonelIzinTakip\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PersonelIzinTakip.bundle.scp.css",
       "Selectors": [],
@@ -9743,7 +9846,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Mar 2026 11:31:22 GMT"
+          "Value": "Mon, 21 Sep 2026 14:04:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9788,7 +9891,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Mar 2026 11:31:22 GMT"
+          "Value": "Mon, 21 Sep 2026 14:04:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9833,7 +9936,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Mar 2026 11:31:22 GMT"
+          "Value": "Mon, 21 Sep 2026 14:04:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9870,7 +9973,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Mar 2026 11:31:22 GMT"
+          "Value": "Mon, 21 Sep 2026 14:04:33 GMT"
         },
         {
           "Name": "Cache-Control",

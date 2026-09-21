@@ -249,6 +249,29 @@ namespace PersonelIzinTakip.Migrations
                     b.ToTable("Departmanlar");
                 });
 
+            modelBuilder.Entity("PersonelIzinTakip.Models.Holiday", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsHalfDay")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Holidays");
+                });
+
             modelBuilder.Entity("PersonelIzinTakip.Models.IzinTalep", b =>
                 {
                     b.Property<int>("Id")

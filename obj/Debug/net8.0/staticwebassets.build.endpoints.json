@@ -2223,6 +2223,88 @@
       ]
     },
     {
+      "Route": "Mailler.2if8gwv2rd.txt",
+      "AssetFile": "Mailler.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6567"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hv/c0sNhyjGng7vnDjoP9v6d8PWRLHuMIPK3BBF7zrA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Sep 2026 13:35:27 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2if8gwv2rd"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hv/c0sNhyjGng7vnDjoP9v6d8PWRLHuMIPK3BBF7zrA="
+        },
+        {
+          "Name": "label",
+          "Value": "Mailler.txt"
+        }
+      ]
+    },
+    {
+      "Route": "Mailler.txt",
+      "AssetFile": "Mailler.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6567"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hv/c0sNhyjGng7vnDjoP9v6d8PWRLHuMIPK3BBF7zrA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Sep 2026 13:35:27 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hv/c0sNhyjGng7vnDjoP9v6d8PWRLHuMIPK3BBF7zrA="
+        }
+      ]
+    },
+    {
       "Route": "PersonelIzinTakip.85xbkbrghk.styles.css",
       "AssetFile": "PersonelIzinTakip.styles.css",
       "Selectors": [],
@@ -2249,7 +2331,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Mar 2026 11:31:22 GMT"
+          "Value": "Mon, 21 Sep 2026 14:04:33 GMT"
         }
       ],
       "EndpointProperties": [
@@ -2294,7 +2376,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 04 Mar 2026 11:31:22 GMT"
+          "Value": "Mon, 21 Sep 2026 14:04:33 GMT"
         }
       ],
       "EndpointProperties": [

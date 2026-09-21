@@ -58,7 +58,21 @@
                         @if (User.Identity.IsAuthenticated && User.IsInRole("Mudur"))
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-info fw-bold" asp-controller="Izin" asp-action="OnayBekleyenler"><i class="fa-solid fa-user-shield me-1"></i> Müdür Paneli</a>
+                                <a class="nav-link text-info fw-bold" asp-controller="Izin" asp-action="OnayBekleyenler">
+                                    <i class="fa-solid fa-user-shield me-1"></i> Müdür Paneli
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark fw-bold" asp-controller="Izin" asp-action="Calisanlar">
+                                    <i class="fa-solid fa-users-gear me-1"></i> Çalışan Yönetimi
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-warning fw-bold" asp-controller="Tatil" asp-action="Index">
+                                    <i class="fa-solid fa-umbrella-beach me-1"></i> Tatil Yönetimi
+                                </a>
                             </li>
                         }
                     </ul>

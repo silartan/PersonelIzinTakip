@@ -1,0 +1,77 @@
+﻿<div class='card shadow-sm border-0 mb-4'>
+  <div class='card-header bg-dark text-white d-flex justify-content-between align-items-center'>
+    <span class='fw-bold'>Kime: nzrozlem2004@gmail.com</span>
+    <span class='badge bg-secondary'>18.06.2026 14:44:49</span>
+  </div>
+  <div class='card-body bg-white'>
+    <h5 class='card-title text-primary fw-bold'>Konu: Reset Password</h5>
+    <hr />
+    <div class='card-text'>Please reset your password by <a href='https://localhost:7217/Identity/Account/ResetPassword?code=Q2ZESjhBZnFYYk9qSXNkTWx4MnBMbld1MHJVdnZ4b2FlWkpCUDhmY00xbGJuWWxwSXZyeHRsVFgvSmE1dWFRQ3RnZFVrSEhsOVVuNkFib2pLanF5SEpoaVhtd2toRGJSQ1Vhc2E1YlRMaHRYMWNkVnZURzRnekw4ZFJiRW00Q3JuNGlGTHNob0plT3FQNjRqcms0UkdneFlzMWtxaTNSd1pFKy84MnBkZXlJVVJYVDhLRG5VaWZjQjViOCtKY3BmczVrY3ZxUGZDT1dFbXZFNDVRSEVPWkVGVlc3djNmNThmMHFSeEdGbUY0WDVnVjgv'>clicking here</a>.</div>
+  </div>
+</div>
+<div class='card shadow-sm border-0 mb-4'>
+  <div class='card-header bg-dark text-white d-flex justify-content-between align-items-center'>
+    <span class='fw-bold'>Kime: ikahraman@gmail.com</span>
+    <span class='badge bg-secondary'>18.06.2026 15:18:51</span>
+  </div>
+  <div class='card-body bg-white'>
+    <h5 class='card-title text-primary fw-bold'>Konu: Confirm your email</h5>
+    <hr />
+    <div class='card-text'>Please confirm your account by <a href='https://localhost:7217/Identity/Account/ConfirmEmail?userId=4f5aeea0-c246-497a-8d6a-e478e484f502&amp;code=Q2ZESjhBZnFYYk9qSXNkTWx4MnBMbld1MHJXZVF5eW5GbmJkOWhSS3VrUklTNC9XTUpCSllmTERjZlpiR3Y3MnpzSlpjeHRYT0V2RWdOaDlpbVkxSm1iZW05anFaTlNzNFVKV1ExdGt4Rmp4YlhmRXpLUENBeXkxdk1XRnlXdEZzUEFJRzVFeVpXS25Kajg3VS9HeldMdWVOZU9lTlprRnhYRDdrdDU3eVlHNkcxOXlYZnM0OU5qMHh4QUNvWklqVFIvclUrdGpGbmdKMWltbjJtNGZlOVdTYkF5b2dmcG14MWFQMVUyUG1tbFl6SElDSDlEcDNQY1loRWo0cWR2OHU1bEhOUT09&amp;returnUrl=%2F'>clicking here</a>.</div>
+  </div>
+</div>
+<div class='card shadow-sm border-0 mb-4'>
+  <div class='card-header bg-dark text-white d-flex justify-content-between align-items-center'>
+    <span class='fw-bold'>Kime: melikekocum486@gmail.com</span>
+    <span class='badge bg-secondary'>18.06.2026 16:30:26</span>
+  </div>
+  <div class='card-body bg-white'>
+    <h5 class='card-title text-primary fw-bold'>Konu: Confirm your email</h5>
+    <hr />
+    <div class='card-text'>Please confirm your account by <a href='https://localhost:7217/Identity/Account/ConfirmEmail?userId=c44d3c9f-661d-4dfe-9a49-ccb92b5cc791&amp;code=Q2ZESjhBZnFYYk9qSXNkTWx4MnBMbld1MHJXUnBMMXp1d1gxbVZ1NUxvNTNsUlVrRWlQMk5oanNZcjh0U1dXU29Kb3o4Qy9DeDhDQmNvVExVU05kL2JDbjdiV2E4eU9QeXJ4SVluZWtPRFRwZXlaeUxrQzhNMXZLZDJVanBXaHhLekxSeE9QVUhoQStqUDN2NHBxbFliajA4K1k3YXZYQWQvL2ZOZU8yeWIycFAwWC8xcitsRnZOb2RmVkxoSHdIRU1jV0VuM3J2UGVWd1ZmNDlrSDZjYTZOSUtmQzZSVCt6QzF4ejZiR3ZNeitEcEh2ZGZzeE9WRVJkeEZpMDJuU21HR2hidz09&amp;returnUrl=%2F'>clicking here</a>.</div>
+  </div>
+</div>
+<div class='card shadow-sm border-0 mb-4'>
+  <div class='card-header bg-dark text-white d-flex justify-content-between align-items-center'>
+    <span class='fw-bold'>Kime: nzrozlem2004@gmail.com</span>
+    <span class='badge bg-secondary'>18.06.2026 16:33:10</span>
+  </div>
+  <div class='card-body bg-white'>
+    <h5 class='card-title text-primary fw-bold'>Konu: Reset Password</h5>
+    <hr />
+    <div class='card-text'>Please reset your password by <a href='https://localhost:7217/Identity/Account/ResetPassword?code=Q2ZESjhBZnFYYk9qSXNkTWx4MnBMbld1MHJXaUZEWHRTTWYrZWUwVkpCbDNGUnl0Y3M4c1dEMGk2OVE5VGhRUy9taVRyY0EyMVhobVNva0ZrdnMyZkQvdTNuZDVJU0tOSnJKczdmd1p1Yis2SGRFeGhQaXBSYzFCQWlZV0NYZG9KSVpJM2R4clNPdzZ1RWpVdGNTMVdzbXdDM3k1MnAraUVRQlVDdlcvRjJLSkl5VDFaOFBIVG0yWWw5T0ppMVEweWNYYVpZeFpJVmVqWEhHcSt6clB1WmcvSDRQTFBSSFBnbU9rSGNwdjA3UU9uREds'>clicking here</a>.</div>
+  </div>
+</div>
+<div class='card shadow-sm border-0 mb-4'>
+  <div class='card-header bg-dark text-white d-flex justify-content-between align-items-center'>
+    <span class='fw-bold'>Kime: nzrozlem2004@gmail.com</span>
+    <span class='badge bg-secondary'>18.06.2026 16:38:24</span>
+  </div>
+  <div class='card-body bg-white'>
+    <h5 class='card-title text-primary fw-bold'>Konu: Reset Password</h5>
+    <hr />
+    <div class='card-text'>Please reset your password by <a href='https://localhost:7217/Identity/Account/ResetPassword?code=Q2ZESjhBZnFYYk9qSXNkTWx4MnBMbld1MHJWc0RmdksvdHlOS0F2N1VGb2V5Mk5haFVRdU81cDNYa3l5V3A4ellrcnNlemZOMUszWitnNVVlTTJ5T1FhTEVqSTd6OWVSVDRROVRXSFNCdzJidTNiRUl4S21nOEdUbEtFdGZqZzVTMStMVHlxMUNJRWxVdUgyZktkek8yNFppZjZxaTVGeUFDaTlaKy9OTWtZYjNBQ2hHbWU5UWM0MzlnN2xBN0V3MFdkckhNQlZrdHBiQ05aZUNoZDc2T0tXckc1ckJQbyt1QzFkNm9MK3Fsc3JpMWND'>clicking here</a>.</div>
+  </div>
+</div>
+<div class='card shadow-sm border-0 mb-4'>
+  <div class='card-header bg-dark text-white d-flex justify-content-between align-items-center'>
+    <span class='fw-bold'>Kime: nzrozlem2004@gmail.com</span>
+    <span class='badge bg-secondary'>18.06.2026 16:41:29</span>
+  </div>
+  <div class='card-body bg-white'>
+    <h5 class='card-title text-primary fw-bold'>Konu: Reset Password</h5>
+    <hr />
+    <div class='card-text'>Please reset your password by <a href='https://localhost:7217/Identity/Account/ResetPassword?code=Q2ZESjhBZnFYYk9qSXNkTWx4MnBMbld1MHJYbmVlaEpzZEZqYUovRWFhRGdEV0hvcm1Iem5rZkNtRkU4R0JJVmd5TkFJUHpkMWY1dzM3aFJTVlJNMEFLT2sxMXZCVXpvcU9mb0E3U05EVFYrbWsybGNKRVcvMlVQcW03OXJrVjhMekNJWWE2RVRka21SYmQxck13dUdDWTRHajQ4MHZrZkZkZFFkWHMrZUNmZGhzNDVYZUZJV3Q4R0huVWtxK1NlenJoMWJ3Q0NLbjUwcXZ4T2prRE0wNEpZSnA1Y1BGZkN3ajJvS2lEUHZ1eE5DRWQ5'>clicking here</a>.</div>
+  </div>
+</div>
+<div class='card shadow-sm border-0 mb-4'>
+  <div class='card-header bg-dark text-white d-flex justify-content-between align-items-center'>
+    <span class='fw-bold'>Kime: yelizpehlivan@gmail.com</span>
+    <span class='badge bg-secondary'>21.09.2026 16:35:27</span>
+  </div>
+  <div class='card-body bg-white'>
+    <h5 class='card-title text-primary fw-bold'>Konu: Confirm your email</h5>
+    <hr />
+    <div class='card-text'>Please confirm your account by <a href='https://localhost:7217/Identity/Account/ConfirmEmail?userId=59f95147-33f8-4b29-bf3d-26d65c0487ae&amp;code=Q2ZESjhHQ0tpZS9GWm90RHJBZ1lqRERJa2hmWkxXaWhPSUNDUzRndnNyZTRnbWpPUjJGMkJDZXpMOXlSdGUyRUhUdlJQa09oREc1Z2JNajA4VnJNQmhaUGt1QnNEaUhkY2lYOXVkT0MxUllLbUFmK3BEejBkcUxVdzltNit3cEJaZ2dGa2RGZ3huc016Wk51dUI5eGFsdVhNMTFiT2FVUnYzVjV1ZGVkU2lRalpmaDJrLzF5bjcrUGRubzZDOXF2eldmTWZEQ1cxVVF2Y2x6RkVGVGg4SGs5ZDZVdFZRYjc5NWxaZHZRTi83blN6VTB0VmhKdGF0Ry9Qd29RYlJnZ0R5d0NPZz09&amp;returnUrl=%2F'>clicking here</a>.</div>
+  </div>
+</div>

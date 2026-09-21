@@ -1,0 +1,23 @@
+﻿@{
+    Layout = null; // Layout'a takılmasın, tertemiz bağımsız bir sayfa olsun
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Yerel E-Posta Sunucusu (Simulation)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light py-4">
+    <div class="container">
+        <div class="alert alert-info shadow-sm fw-bold mb-4">
+            <i class="text-primary me-2">⚙️ [Geliştirici Modu]:</i> Gelen şifre sıfırlama mailleri gerçek zamanlı olarak bu panele düşmektedir.
+        </div>
+        <h2>📬 Gelen E-Posta Kutusu</h2>
+        <hr />
+        <div id="email-list">
+            @Html.Raw(ViewBag.Mailler)
+        </div>
+    </div>
+</body>
+</html>

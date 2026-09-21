@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Yeni Tatil Ekle";
+}
+
+<div class="container mt-4">
+    <h2>Yeni Resmi Tatil Ekle</h2>
+    <hr />
+
+    <div class="row">
+        <div class="col-md-6">
+            <form asp-action="Ekle" method="post">
+                <div class="form-group mb-3">
+                    <label class="control-label fw-bold">Tatil Adı (Örn: Ramazan Bayramı)</label>
+                    <input name="Name" class="form-control" required placeholder="Tatilin adını yazın..." />
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="control-label fw-bold">Başlangıç Tarihi</label>
+                        <input name="StartDate" type="date" class="form-control" required />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="control-label fw-bold">Bitiş Tarihi</label>
+                        <input name="EndDate" type="date" class="form-control" required />
+                    </div>
+                </div>
+
+                <div class="form-group form-check mb-4 mt-2">
+                    <input name="IsHalfDay" value="true" class="form-check-input" type="checkbox" id="halfDayCheck" />
+                    <label class="form-check-label" for="halfDayCheck">
+                        Bu tatil yarım gün mü? (Arife günleri vb. için işaretleyin)
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Sisteme Kaydet</button>
+                    <a asp-action="Index" class="btn btn-secondary ms-2">Listeye Dön</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

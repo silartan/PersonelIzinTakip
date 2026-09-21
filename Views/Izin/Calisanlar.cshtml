@@ -1,0 +1,64 @@
+﻿@model IEnumerable<PersonelIzinTakip.Models.ApplicationUser>
+
+<div class="container mt-4">
+    <div class="mb-4">
+        <h2 class="fw-bold text-dark"><i class="fa-solid fa-users text-primary me-2"></i>Personel Yönetim Paneli</h2>
+        <p class="text-muted small">Sistemde kayıtlı tüm şirket çalışanları aşağıda listelenmiştir.</p>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show shadow-sm" role="alert">
+            <i class="fa-solid fa-circle-check me-2"></i> @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <div class="card shadow-sm border-0">
+        <div class="card-body p-0">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th class="ps-4">Çalışan Bilgisi</th>
+                        <th>E-Posta</th>
+                        <th>Departman No</th>
+                        <th class="text-end pe-4">Yetkilendirme</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var user in Model)
+                    {
+                        <tr>
+                            <td class="ps-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="avatar-circle me-3 bg-secondary text-white d-flex align-items-center justify-content-center rounded-circle fw-bold" style="width: 40px; height: 40px; font-size: 14px;">
+                                        @(user.AdSoyad?.Substring(0, 1).ToUpper() ?? "P")
+                                    </div>
+                                    <div class="fw-bold text-dark">@user.AdSoyad</div>
+                                </div>
+                            </td>
+                            <td><span class="text-muted small">@user.Email</span></td>
+                            <td><span class="badge bg-light text-dark border">Departman @user.DepartmanId</span></td>
+                            
+                            <td class="text-end pe-4">
+                                @if (user.Email != User.Identity?.Name)
+                                {
+                                    <form asp-action="MakeManager" asp-controller="Izin" method="post" style="display:inline;" onsubmit="return confirm('@user.Email isimli çalışanı MÜDÜR yapmak istediğinize emin misiniz?');">
+                                        <input type="hidden" name="userId" value="@user.Id" />
+                                        <button type="submit" class="btn btn-warning btn-sm fw-bold text-dark rounded-pill shadow-sm px-3">
+                                            <i class="fa-solid fa-user-tie me-1"></i> Müdür Yap
+                                        </button>
+                                    </form>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-success rounded-pill px-3 py-1">Şu Anki Kullanıcı</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

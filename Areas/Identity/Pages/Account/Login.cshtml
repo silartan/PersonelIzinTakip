@@ -37,7 +37,7 @@
                                     Beni Hatırla
                                 </label>
                             </div>
-                            <a id="forgot-password" asp-page="./ForgotPassword" class="text-decoration-none small fw-bold">Şifremi Unuttum</a>
+                            <a id="forgot-password" href="/Identity/Account/ForgotPassword" class="text-decoration-none small fw-bold">Şifremi Unuttum</a>
                         </div>
 
                         <button id="login-submit" type="submit" class="w-100 btn btn-primary btn-lg rounded-pill fw-bold shadow-sm mb-3">
@@ -46,7 +46,7 @@
 
                         <div class="text-center mt-3 border-top pt-3">
                             <p class="small text-muted mb-0">Henüz hesabınız yok mu?</p>
-                            <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="fw-bold text-decoration-none">
+                            <a href="/Identity/Account/Register" class="fw-bold text-decoration-none">
                                 Yeni Personel Hesabı Oluştur
                             </a>
                         </div>

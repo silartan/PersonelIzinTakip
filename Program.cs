@@ -1,11 +1,14 @@
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using PersonelIzinTakip.Data;
 using PersonelIzinTakip.Models;
+using PersonelIzinTakip.Services;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddTransient<IEmailSender, EmailSender>();
 // 1. Veritabanı Bağlantısı
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(
@@ -31,16 +34,22 @@ builder.Services.AddAuthorization(options =>
     options.FallbackPolicy = options.DefaultPolicy;
 });
 
-// 2. Login, Register gibi sayfaların bu kurala takılmamasını sağlıyoruz
+// 2. Login, Register ve Şifremi Unuttum sayfalarının bu kurala takılmamasını sağlıyoruz
 builder.Services.AddRazorPages(options =>
 {
     options.Conventions.AllowAnonymousToAreaPage("Identity", "/Account/Login");
     options.Conventions.AllowAnonymousToAreaPage("Identity", "/Account/Register");
     options.Conventions.AllowAnonymousToAreaPage("Identity", "/Account/Logout");
+
+    options.Conventions.AllowAnonymousToAreaPage("Identity", "/Account/ForgotPassword");
+    options.Conventions.AllowAnonymousToAreaPage("Identity", "/Account/ForgotPasswordConfirmation");
+    options.Conventions.AllowAnonymousToAreaPage("Identity", "/Account/ResetPassword");
+    options.Conventions.AllowAnonymousToAreaPage("Identity", "/Account/ResetPasswordConfirmation");
 });
 
 builder.Services.AddRazorPages(); // Razor Pages desteği şart
-
+// Statik dosyalara (wwwroot içindekilere) girişsiz erişim izni veriyoruz
+builder.Services.Configure<StaticFileOptions>(options => { });
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())

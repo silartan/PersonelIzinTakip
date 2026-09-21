@@ -17,6 +17,7 @@ namespace PersonelIzinTakip.Data
         public DbSet<Departman> Departmanlar { get; set; }
         public DbSet<IzinTalep> IzinTalepleri { get; set; }
         public DbSet<LogKaydi> LogKayitlari { get; set; }
+        public DbSet<Holiday> Holidays { get; set; }
     }
 
 }
